@@ -1,0 +1,141 @@
+stackbitVersion: ~0.3.0
+ssgName: gatsby
+nodeVersion: '12'
+publishDir: public
+pagesDir: content
+models:
+  post:
+    type: page
+    label: Post
+    folder: posts
+    match: '*'
+    fields:
+      - type: date
+        name: date
+        label: Date
+      - type: string
+        name: title
+        label: Title
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: boolean
+        name: published
+        label: Published
+      - type: image
+        name: cover_image
+        label: Cover Image
+      - type: boolean
+        name: canonical_url
+        label: Canonical Url
+      - type: string
+        name: description
+        label: Description
+      - type: boolean
+        name: series
+        label: Series
+  project:
+    type: page
+    label: Project
+    folder: projects
+    match: '*'
+    fields:
+      - type: boolean
+        name: featured
+        label: Featured
+      - type: date
+        name: date
+        label: Date
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: repo_link
+        label: Repo Link
+      - type: string
+        name: demo_link
+        label: Demo Link
+      - type: list
+        name: techs
+        label: Techs
+        items:
+          type: string
+      - type: image
+        name: cover_image
+        label: Cover Image
+  about:
+    type: page
+    label: About
+    folder: sections/about
+    match: '*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: image
+        name: about_image
+        label: About Image
+      - type: list
+        name: techs
+        label: Techs
+        items:
+          type: string
+  card:
+    type: page
+    label: Card
+    folder: sections/cards
+    match: '*'
+    fields:
+      - type: list
+        name: cards
+        label: Cards
+        items:
+          type: object
+          fields:
+            - type: string
+              name: label
+              label: Label
+            - type: string
+              name: icon
+              label: Icon
+            - type: string
+              name: prefix
+              label: Prefix
+            - type: string
+              name: description
+              label: Description
+  contact:
+    type: page
+    label: Contact
+    folder: sections/contact
+    match: '*'
+    fields:
+      - type: string
+        name: phone
+        label: Phone
+      - type: string
+        name: email
+        label: Email
+      - type: string
+        name: address
+        label: Address
+  hero:
+    type: page
+    label: Hero
+    folder: sections/hero
+    match: '*'
+    fields:
+      - type: string
+        name: introduction
+        label: Introduction
+      - type: string
+        name: tagline
+        label: Tagline
+      - type: string
+        name: cta_label
+        label: Cta Label
+      - type: string
+        name: cta_link
+        label: Cta Link
